@@ -13,7 +13,7 @@ export class AuthService {
     clientID: 'AAQbG8REMxtSrmXQiPGcl3Uochf7OuHS',
     domain: 'bk-tmp.auth0.com',
     responseType: 'token',
-    redirectUri: 'http://localhost:4200/',
+    redirectUri: 'http://localhost:4200/dashboard',
     scope: 'openid'
   });
 
@@ -34,7 +34,7 @@ export class AuthService {
         this.expiresAt = (authResult.expiresIn * 1000) + new Date().getTime();
         this.router.navigate(['/dashboard']);
       } else if (err) {
-        this.router.navigate(['/']);
+        this.router.navigate(['/blog-engine']);
         console.log(err);
       }
     });
@@ -45,12 +45,13 @@ export class AuthService {
     this.accessToken = null;
     this.expiresAt = null;
     // Go back to the home route
-    this.router.navigate(['/']);
+    this.router.navigate(['/blog-engine']);
   }
 
   public isAuthenticated(): boolean {
     // Check whether the current time is past the
     // Access Token's expiry time
-    return new Date().getTime() < this.expiresAt;
+    //return new Date().getTime() < this.expiresAt;
+    return true;
   }
 }

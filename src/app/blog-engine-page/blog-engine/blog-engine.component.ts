@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthService } from './auth.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-blog-engine',
@@ -8,6 +8,6 @@ import { AuthService } from './auth.service';
 })
 export class BlogEngineComponent {
   constructor(public auth: AuthService) {
-    auth.handleAuthentication();
+    //auth.handleAuthentication();
   }
 }
