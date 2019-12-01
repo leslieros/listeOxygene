@@ -1,0 +1,133 @@
+@media screen and (min-width: 1300px) {
+.container {
+    padding: 0 100px 20px 100px;
+}
+
+.cards {
+    display: flex;
+    box-sizing: border-box;
+    color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 30px 10px 30px;
+    background-color: #01538b;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #8B8B8B;
+    flex-basis: 100%;
+    max-width: 300px;
+    min-width: 260px;
+}
+
+.title {
+    background-color: #85c95e;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    font-family: Futura;
+    font-weight: bold;
+    font-style: italic;
+    width: 80%;
+}
+}
+.nom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0 0 0;
+    font-weight: bold;
+}
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0 5px 0;
+}
+
+.photo {
+    border-radius: 50%;
+    width: 40%;
+}
+.description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    font-style: italic;
+}
+
+.citation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px 20px 10px;
+    }
+    .title {
+        background-color: #85c95e;
+        color: white;
+        padding: 2px 2px 2px 2px;
+        font-family: Futura;
+        font-weight: bold;
+        font-style: italic;
+        width: 80%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        margin: 6px 10px 6px 10px;
+        background-color: #01538b;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px #8B8B8B;
+        flex-basis: 100%;
+        max-width: 300px;
+    }
+
+    .cards {
+        display: flex;
+        box-sizing: border-box;
+        color: white;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+    .container {
+        padding: 0 10px 20px 10px;
+    }
+    .title {
+        background-color: #85c95e;
+        color: white;
+        padding: 2px 2px 2px 2px;
+        font-family: Futura;
+        font-weight: bold;
+        font-style: italic;
+        width: 80%;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        margin: 6px 10px 6px 10px;
+        background-color: #01538b;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px #8B8B8B;
+        flex-basis: 100%;
+        max-width: 400px;
+    }
+
+    .cards {
+        display: flex;
+        box-sizing: border-box;
+        color: white;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

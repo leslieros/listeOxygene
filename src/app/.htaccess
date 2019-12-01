@@ -1,0 +1,89 @@
+# INFORMATION
+# For new versions of this Gist go to:
+# https://gist.github.com/julianpoemp/bcf277cb56d2420cc53ec630a04a3566
+# Version 1.3.0
+#
+# Contributors:
+# - RaschidJFR [https://gist.github.com/RaschidJFR/f6d21a03b0692f5c7a6a23954003f00b]
+
+# Notice:
+# If you need redirection to https, uncomment the redirection part
+# If you have issues with browser caching you can uncomment the BROWSER CACHING part
+
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+ 	# -- Redirection to https (optional):
+	# Please notice: You have to set your base-href attribute correctly:
+	# a) If your app is on the root of the domain, you can just use "/"
+	# b) If not, you need to set "https://" instead of "http://" in your base-href attribute
+	# If you need this, uncomment the next two commands
+	
+	RewriteCond %{HTTPS} !on
+  	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+
+	RewriteRule ^.*$ - [NC,L]
+	RewriteRule ^(.*) index.html [NC,L]
+</IfModule>
+
+#------------ BROWSER CACHING
+# disable browser caching in production.
+#<FilesMatch "\.(html|htm|js|json|css)$">
+#	<IfModule mod_headers.c>
+#		FileETag None
+#		Header unset ETag
+#		Header unset Pragma
+#		Header unset Cache-Control
+#		Header unset Last-Modified
+#		Header set Pragma "no-cache"
+#		Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+#		Header set Expires "Mon, 10 Apr 1972 00:00:00 GMT"
+#	</IfModule>
+#</FilesMatch>
+#------------
+# BEGIN Expire headers
+<IfModule mod_expires.c>
+ ExpiresActive On
+ ExpiresDefault "access plus 7200 seconds"
+ ExpiresByType image/jpg "access plus 2592000 seconds"
+ ExpiresByType image/jpeg "access plus 2592000 seconds"
+ ExpiresByType image/png "access plus 2592000 seconds"
+ ExpiresByType image/gif "access plus 2592000 seconds"
+ AddType image/x-icon .ico
+ ExpiresByType image/ico "access plus 2592000 seconds"
+ ExpiresByType image/icon "access plus 2592000 seconds"
+ ExpiresByType image/x-icon "access plus 2592000 seconds"
+ ExpiresByType text/css "access plus 2592000 seconds"
+ ExpiresByType text/javascript "access plus 2592000 seconds"
+ ExpiresByType text/html "access plus 7200 seconds"
+ ExpiresByType application/xhtml+xml "access plus 7200 seconds"
+ ExpiresByType application/javascript A2592000
+ ExpiresByType application/x-javascript "access plus 2592000 seconds"
+ ExpiresByType application/x-shockwave-flash "access plus 2592000 seconds"
+</IfModule>
+# END Expire headers
+# BEGIN Cache-Control Headers
+<ifmodule mod_headers.c>
+ 
+ <filesmatch "\\.(ico|jpe?g|png|gif|swf|gz|ttf|webp|otf)$">
+ Header set Cache-Control "max-age=2592000"
+ </filesmatch>
+
+ <filesmatch "\\.(css)$">
+ Header set Cache-Control "max-age=2592000"
+ </filesmatch>
+
+ <filesmatch "\\.(js)$">
+ Header set Cache-Control "max-age=2592000"
+ </filesmatch>
+
+<filesmatch "\\.(html|htm)$">
+Header set Cache-Control "max-age=7200"
+</filesmatch>
+
+</ifmodule>
+
+# END Cache-Control Headers
