@@ -1,5 +1,24 @@
 <div class="container">
+    <mat-sidenav-container>
+        <mat-sidenav-content>
+            <mat-toolbar>
+                <div fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.xs>
+                    <span class="label">Liste Oxygène</span>
+                </div>
+                <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+                    <ul fxLayout fxLayoutGap="20px" class="navigation-items">
+                        <li>
+                            <a routerLink="/programme">
+                                <span class="label">Programme</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </mat-toolbar>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
     <div class="banner">
+
         <img class="logo" alt="oxygène toulon" src="../../assets/images/Logo_Oxygene_jaune.png">
     </div>
 </div>
