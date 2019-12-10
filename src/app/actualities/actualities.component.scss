@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: Quicksand;
+    font-size: large;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    color: #01538b;
+}
+
+.divider{
+    background-color: #85c95e;
+    width: 100%;
+    height: 3px;
+    border: none;
+}

@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class='container'>
+    <div class='post' *ngFor="let post of posts">
+        <h3 class='title'>{{post.titre}}</h3>
+        <span class='author'>{{post.auteur}}</span>
+        <span class='date'>{{post.date  | date: 'd/M/y'}}</span>
+        <a class='link' href="{{post.lien}}">{{post.lien}}</a>
+        <p class='article'>{{post.article}}</p>
+        <mat-divider class='divider' [vertical]=false></mat-divider>
+    </div>
+</div>
