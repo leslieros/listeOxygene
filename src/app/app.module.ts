@@ -18,6 +18,8 @@ import { BlogEngineComponent } from './blog-engine-page/blog-engine/blog-engine.
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import { ActualitiesComponent } from './actualities/actualities.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     DashboardComponent,
     PostDialogComponent,
     BlogEngineComponent,
-    PostDialogComponent
+    PostDialogComponent,
+    ActualitiesComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +42,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     FormsModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDividerModule
   ],
   entryComponents: [PostDialogComponent],
   providers: [AuthService, DataService],

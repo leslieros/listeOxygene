@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { BlogEngineComponent } from './blog-engine-page/blog-engine/blog-engine.component';
 import { DashboardComponent } from './blog-engine-page/dashboard/dashboard.component';
+import { ActualitiesComponent } from './actualities/actualities.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,9 @@ const routes: Routes = [
   { path: 'blog-engine', component: BlogEngineComponent },
   { path: 'index.html#/blog-engine', component: BlogEngineComponent },
   { path: 'dashboard', component: DashboardComponent},
-  { path: 'index.html#/dashboard', component: DashboardComponent}
+  { path: 'index.html#/dashboard', component: DashboardComponent},
+  { path: 'actualites', component: ActualitiesComponent},
+  { path: 'index.html#/actualites', component: ActualitiesComponent}
 ];
 
 @NgModule({
