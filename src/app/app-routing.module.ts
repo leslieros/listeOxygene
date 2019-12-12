@@ -8,7 +8,6 @@ const routes: Routes = [
   { path: 'liste-oxygene-toulon', component: HomeComponent },
   { path: '',   redirectTo: '/liste-oxygene-toulon', pathMatch: 'full' },
   { path: 'programme', component: ProgrammeComponent},
-  { path: 'index.html#/programme', component: ProgrammeComponent}
 ];
 
 @NgModule({
