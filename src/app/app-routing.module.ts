@@ -5,7 +5,7 @@ import { ProgrammeComponent } from './programme/programme.component';
 
 
 const routes: Routes = [
-  { path: 'liste-oxygene-toulon', component: HomeComponent },
+  { path: 'liste-oxygene-toulon', component: HomeComponent},
   { path: '',   redirectTo: '/liste-oxygene-toulon', pathMatch: 'full' },
   { path: 'programme', component: ProgrammeComponent},
 ];

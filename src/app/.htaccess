@@ -19,14 +19,14 @@
 	# b) If not, you need to set "https://" instead of "http://" in your base-href attribute
 	# If you need this, uncomment the next two commands
 	
-	RewriteCond %{HTTPS} !on
-  	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+	RewriteCond %{HTTPS} off
+	RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
 
-	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
-	RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
-
-	RewriteRule ^.*$ - [NC,L]
-	RewriteRule ^(.*) index.html [NC,L]
+	RewriteBase /
+	RewriteRule ^index.html$ - [L]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule . /index.html [L]
 </IfModule>
 
 #------------ BROWSER CACHING
