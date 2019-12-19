@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  private isMobileResolution: boolean;
+  isMobileResolution: boolean;
   
   constructor() { 
     if (window.innerWidth < 768) {

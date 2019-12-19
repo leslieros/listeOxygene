@@ -17,6 +17,9 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatSidenavModule, MatToolbarModule, MatIconModule, MatListModule} from '@angular/material';
 import { ProgrammeComponent } from './programme/programme.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { ContactComponent } from './contact/contact.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,9 @@ import { ProgrammeComponent } from './programme/programme.component';
     SupportComponent,
     FooterComponent,
     BlogEngineComponent,
-    ProgrammeComponent
+    ProgrammeComponent,
+    ContactComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,8 @@ import { ProgrammeComponent } from './programme/programme.component';
     MatSidenavModule,
     MatToolbarModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
   ],
   entryComponents: [],
   providers: [AuthService],

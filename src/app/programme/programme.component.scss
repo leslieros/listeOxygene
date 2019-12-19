@@ -1,15 +1,84 @@
-.section {
-    font-family: Quicksand;
-}
-
-.env {
-    height: 1120px;
-}
 .white {
     color: #01538b;
+}
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.cat {
+    font-family: Futura;
+    font-weight: bold;
+}
+
+.cit {
+    font-family: Futura;
+    font-weight: bold;
+}
+
+.title {
+    background-color: #85c95e;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    font-family: Futura;
+    font-weight: bold;
+    font-style: italic;
+    width: 80%;
 }
 
 .blue {
     background-color: #01538b;
     color: white;
+}
+
+.section {
+    font-family: Quicksand;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 1300px) {
+
+
+.left {
+    width: 49%;
+    box-sizing: border-box;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rigth {
+    width: 49%;
+    box-sizing: border-box;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ideas {
+    width: 100%;
+    margin-right: 10px;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+    .ideas {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+    .ideas {
+        margin-right: 10px;
+    }
 }
