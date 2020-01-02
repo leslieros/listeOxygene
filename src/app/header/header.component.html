@@ -1,15 +1,43 @@
 <div class="container">
-    <mat-sidenav-container>
+    <div class="menu" *ngIf="isMobileResolution">
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>view_headline</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/liste-oxygene-toulon" routerLinkActive="active">
+                <span class="label-menu">Accueil</span>
+            </button>
+            <button mat-menu-item routerLink="/programme" routerLinkActive="active">
+                <span class="label-menu">Programme</span>
+            </button>
+            <button mat-menu-item routerLink="/contact" routerLinkActive="active">
+                <span class="label-menu">Contact</span>
+            </button>
+        </mat-menu>
+    </div>
+    <mat-sidenav-container *ngIf="!isMobileResolution">
         <mat-sidenav-content>
             <mat-toolbar>
                 <div fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.xs>
-                    <span class="label">Liste Oxygène</span>
+                    <a routerLink="/liste-oxygene-toulon">
+                        <span class="label">Liste Oxygène</span>
+                    </a>
                 </div>
                 <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
                     <ul fxLayout fxLayoutGap="20px" class="navigation-items">
                         <li>
+                            <a routerLink="/liste-oxygene-toulon">
+                                <span class="label">Accueil</span>
+                            </a>
+                        </li>
+                        <li>
                             <a routerLink="/programme">
                                 <span class="label">Programme</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a routerLink="/contact">
+                                <span class="label">Contact</span>
                             </a>
                         </li>
                     </ul>
