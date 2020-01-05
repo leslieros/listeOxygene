@@ -1,9 +1,56 @@
 <div class="container">
-    <p>Pour plus d'informations ou si vous souhaitez nous rejoindre et participer à nos groupes de travail sur les thèmes du programme:
-        Santé et Environnement, Mobilité, Sécurité, Cause Animale et Gouvernance, contactez Olivier Lesage ou Emmanuel Le Lostec
-    via leur mail ou via les réseaux sociaux.</p>
+    <p>Pour plus d'informations ou si vous souhaitez nous rejoindre et participer à nos groupes de travail sur les
+        thèmes du programme:
+        Santé et Environnement, Mobilité, Sécurité, Cause Animale et Gouvernance, contactez Olivier Lesage ou Emmanuel
+        Le Lostec
+        via leur mail ou via les réseaux sociaux.</p>
     <span class="mail">olivier.lesage@listeoxygenetoulon.fr</span>
     <span class="mail">emmanuel.lelostec@listeoxygenetoulon.fr</span>
 
     <h1 class="slogan">Entrons dans un nouvel air</h1>
+
+    <!-- form goes here -->
+    <form>
+
+        <!-- name -->
+        <div class="field">
+            <input type="text" name="name" class="input" [(ngModel)]="nom" placeholder="Nom">
+        </div>
+
+        <!-- email -->
+        <div class="field">
+            <input type="email" name="email" class="input" [(ngModel)]="mail" placeholder="Email">
+        </div>
+
+        <!-- obj -->
+        <div class="field">
+            <input type="text" name="obj" class="input" [(ngModel)]="objet" placeholder="Objet">
+        </div>
+
+        <!-- message -->
+        <div class="field">
+            <textarea class="textarea" name="message" [(ngModel)]="message" placeholder="What's on your mind?"></textarea>
+        </div>
+
+        <button type="submit" class="button is-danger is-large" (click)="sendMail()">Envoyer</button>
+
+    </form>
+    <a href="http://m.me/Oxygene.Toulon">Messenger</a>
+    <div class="fb-messengermessageus" 
+    messenger_app_id="2469817766682083" 
+    page_id="Oxygene.Toulon"
+    color="white"
+    size="standard">
+  </div>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '2469817766682083',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v5.0'
+          });
+        };
+      </script>
+      <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
 </div>

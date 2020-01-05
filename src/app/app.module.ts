@@ -20,6 +20,8 @@ import { ProgrammeComponent } from './programme/programme.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { ContactComponent } from './contact/contact.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { MessageService } from './contact/message.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -46,10 +48,11 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
     MatToolbarModule,
     MatIconModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   entryComponents: [],
-  providers: [AuthService],
+  providers: [AuthService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
